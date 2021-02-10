@@ -15,6 +15,9 @@ install:
   - pip install -r requirements.txt
 script:
   - cd decide
-  - coverage run --branch --source=. ./manage.py test --keepdb
+  - coverage run --branch --source=. ./manage.py test mixnet --keepdb
   - coverage xml
+branches:
+  only:
+    - master
 
